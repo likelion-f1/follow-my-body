@@ -1,0 +1,49 @@
+absl-py @ file:///tmp/build/80754af9/absl-py_1615411205513/work
+astor==0.8.1
+bidict==0.21.2
+certifi==2020.12.5
+click==8.0.1
+coverage @ file:///tmp/build/80754af9/coverage_1614614864940/work
+cycler==0.10.0
+Cython @ file:///tmp/build/80754af9/cython_1618432038002/work
+Flask==2.0.1
+Flask-SocketIO==5.0.3
+gast==0.2.2
+google-pasta==0.2.0
+grpcio @ file:///tmp/build/80754af9/grpcio_1614883945333/work
+h5py @ file:///tmp/build/80754af9/h5py_1593454119955/work
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1617877314848/work
+imutils==0.5.4
+itsdangerous==2.0.1
+Jinja2==3.0.1
+Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
+Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
+kiwisolver @ file:///tmp/build/80754af9/kiwisolver_1612282414123/work
+Markdown @ file:///tmp/build/80754af9/markdown_1614363832606/work
+MarkupSafe==2.0.1
+matplotlib @ file:///tmp/build/80754af9/matplotlib-suite_1613407855456/work
+mkl-fft==1.3.0
+mkl-random @ file:///tmp/build/80754af9/mkl_random_1618853974840/work
+mkl-service==2.3.0
+numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1620831194891/work
+olefile==0.46
+opencv-python==4.5.2.52
+opt-einsum @ file:///tmp/build/80754af9/opt_einsum_1621500238896/work
+Pillow @ file:///tmp/build/80754af9/pillow_1617386154241/work
+protobuf==3.14.0
+pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
+python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+python-engineio==4.2.0
+python-socketio==5.3.0
+scipy @ file:///tmp/build/80754af9/scipy_1618852618548/work
+six @ file:///tmp/build/80754af9/six_1605205313296/work
+tensorboard==1.15.0
+tensorflow==1.15.0
+tensorflow-estimator==1.15.1
+termcolor==1.1.0
+tornado @ file:///tmp/build/80754af9/tornado_1606942283357/work
+typing-extensions @ file:///home/ktietz/src/ci_mi/typing_extensions_1612808209620/work
+webencodings==0.5.1
+Werkzeug==2.0.1
+wrapt==1.12.1
+zipp @ file:///tmp/build/80754af9/zipp_1615904174917/work
