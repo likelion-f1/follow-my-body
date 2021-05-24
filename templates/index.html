@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="container">
+    <video autoplay="true" id="video" playsinline="playsinline"
+           width="{{width}}"  style="transform: scaleX(-1)"></video>
+    <canvas id="canvas" width="{{width}}" height="{{height}}" style="transform: scaleX(-1)"> </canvas>
+    <img id="image">
+</div>
+<div id="cam">
+    <img src="" alt="" id="image2">
+</div>
+
+<div>
+<button id="snap">Snap Photo</button>
+</div>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.0/socket.io.js"></script>-->
+<script src="{{ url_for('static', filename='js/socket.io-3.0.0.js') }}"></script>
+<script src="{{ url_for('static', filename='js/opencv-4.2.5.js') }}"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="{{ url_for('static', filename='js/webcam.min.js') }}"></script>
+
+<script>
+<!--Webcam.set({-->
+<!--			width: 500,-->
+<!--			height: 375,-->
+<!--			image_format: 'jpeg',-->
+<!--			jpeg_quality: 90,-->
+<!--			flip_horiz: true-->
+<!--		});-->
+<!--		Webcam.attach( '#cam' );-->
+</script>
+
+</body>
+
+</html>
