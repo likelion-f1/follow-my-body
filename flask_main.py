@@ -9,16 +9,14 @@ from PIL import Image
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import imutils
 
 import run
-from VideoProperties import VideoProperties
-
 
 width = 640
 height = 480
 
 app = Flask(__name__)
+# app = application
 # app.run('http://127.0.0.1:8080')
 socketio = SocketIO(app)
 answer_mask = ''
@@ -80,8 +78,6 @@ def socket_connect():
 @socketio.on('analyze')
 def analyze(data_image):
     # print('[socket] analyze processing...')
-    # sbuf = StringIO()
-    # sbuf.write(data_image)
 
     # decode and convert into image
     b = BytesIO(b64decode(data_image))
@@ -91,13 +87,7 @@ def analyze(data_image):
     ## converting RGB to BGR, as opencv standards
     frame = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
 
-    # cv2.imshow('aa', frame)
-    # cv2.waitKey(0)
-
     # Process the image frame
-    # frame = imutils.resize(frame, width=700)
-    # frame = cv2.flip(frame, 1)
-
     frame = run.run_with_img(frame)
 
     imgencode = cv2.imencode('.jpg', frame)[1]
