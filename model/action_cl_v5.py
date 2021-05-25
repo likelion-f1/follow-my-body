@@ -3,11 +3,8 @@
 from google.colab import drive
 import tensorflow as tf
 from tensorflow.keras import layers
-from keras.models import load_model
 from tensorflow import keras
 import os
-import re
-import glob
 import cv2
 from io import BytesIO
 import tarfile
@@ -16,7 +13,6 @@ from six.moves import urllib
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Flatten
 from tensorflow.keras.layers import Conv2D, MaxPooling2D
-from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing import image
 from sklearn.model_selection import train_test_split
 from matplotlib import gridspec
