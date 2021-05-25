@@ -3,23 +3,27 @@
 - 프로젝트 수행 기간 : 2021.05.17 ~ 2021.05.24
 - 팀원 : 김소연, 김다은, 양해근, 유한결, 홍성은
 
-1. 기술 스택
-- Pyhon, Javascript
-- Flask 
-- OpenCV
-- Tensorflow
-- Pandas,Numpy
-- matplotlib
+## 기술 스택
+  - Pyhon, Javascript
+  - Flask 
+  - OpenCV
+  - Tensorflow
+  - Pandas,Numpy
+  - matplotlib
 
-2. 활용 모델
-- Deeplab V3+
-- CNN 
- 
-3. 서비스 소개 
+## 활용 모델
+  - Deeplab V3+
+  - CNN 
 
-딥러닝 기술을 활용한 사용자 동작 인식 -> 동작 정확도 예측 서비스 
+## 활용 툴 
+  - Slack
+  - Zoom 
 
-4. 서비스 흐름도
+## 서비스 소개 
+
+  - 딥러닝 기술을 활용한 사용자 동작 인식 -> 동작 정확도 예측 서비스 
+
+## 서비스 흐름도
   - 사용자 접속 
   - 사용자 카메라 인식 
   - 동작 문제 출제 (화면 출력)
