@@ -227,6 +227,7 @@ def get_deeplab_mask(img, RGB=False, visualization=False):
     return seg_map
 
 
+# 구글 드라이브 내 이미 경로 설정
 downdog = [cv2.imread(
     f'/gdrive/My Drive/temp/TRAIN/downdog/image{i}.jpg') for i in range(1, 100)]
 goddess = [cv2.imread(
@@ -264,15 +265,7 @@ X_test = X_test.astype('float32')/255
 X_train = X_train.reshape(-1, 500, 500, 1)
 X_test = X_test.reshape(-1, 500, 500, 1)
 
-
-#np.load.__defaults__=(None, True, True, 'ASCII')
-#np_load_old = np.load
-#np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
-#X_train, X_test, Y_train, Y_test = np.load(drive_path + "img_data.npy")
-#np.load = np_load_old
-#np.load.__defaults__=(None, False, True, 'ASCII')
-
-
+# CNN 모델 수립
 model = keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(384, 384, 1)),
     layers.MaxPooling2D(strides=(2, 2)),
@@ -288,19 +281,23 @@ model = keras.Sequential([
     layers.Dense(num_classes, activation='softmax')
 ])
 
+# 모델 요약
 model.summary()
 
+# 모델 컴파일
 model.compile(loss='categorical_crossentropy',
               optimizer='adam', metrics=['accuracy'])
+# 모델 학습
 history = model.fit(X_train, Y_train, epochs=10)
 
+# 모델 평가
 score = model.evaluate(X_test, Y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
 model.evaluate(X_test, Y_test, verbose=0)
 
-# 학습 곡선
+# 학습 곡선 그래프 확인
 
 pd.DataFrame(history.history).plot(figsize=(8, 5))
 plt.grid(True)
@@ -310,6 +307,7 @@ plt.show()
 
 model.save(groups_folder_path + '/action_cl_model_v1')
 
+# 라벨 예측 확인
 for n in range(len(Y_test)):
     plt.imshow(X_test[n].reshape(384, 384),
                cmap='Greys', interpolation='nearest')
