@@ -30,3 +30,8 @@
   - 사용자 동작 따라하기
   - 실시간 동작 인식
   - 문제-사용자 동작 간 정확도 점수 출력 
+
+## 참고 자료
+[팀 에프원_발표자료_딥러닝_v2.pptx](https://github.com/likelion-f1/follow-my-body/files/10150211/_._._v2.pptx)
+
+
